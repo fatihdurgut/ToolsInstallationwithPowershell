@@ -41,7 +41,16 @@
     # Specify extensions to be checked & installed by modifying $extensions
     $extensions = @(
         "ms-python.python",
-        "ms-dotnettools.csharp"
+        "ms-dotnettools.csharp",
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-azure-github-copilot",
+        "ms-vscode.vscode-copilot-vision",
+        "ms-toolsai.jupyter",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "dbaeumer.vscode-eslint"
     )
 
     $cmd = "code --list-extensions"
