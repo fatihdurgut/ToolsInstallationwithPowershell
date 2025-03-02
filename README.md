@@ -1,7 +1,7 @@
 # Development tools installation with Powershell
 
 ```powershell
-    # Function to install Chocolatey (package manager)
+        # Function to install Chocolatey (package manager)
     function Install-Chocolatey {
         Set-ExecutionPolicy Bypass -Scope Process -Force;
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor  [System.Net.SecurityProtocolType]::Tls12;
@@ -22,11 +22,17 @@
     # Install Visual Studio Code
     choco install -y vscode
 
+     # Install Visual Studio Code Insider
+    choco install vscode-insiders
+
     # Install NodeJS (includes npm)
     choco install -y nodejs
 
     # Install .NET 9
     choco install -y dotnet-sdk
+
+    # Install .Visual Studio Enterprise
+    choco install visualstudio2022enterprise
 
     # Install Windows Terminal
     choco install -y microsoft-windows-terminal
@@ -74,5 +80,6 @@
     Start-Process powershell -ArgumentList "-NoExit", "-Command", $npmScript
     
     Write-Output "All prerequisites, npm, and extensions have been installed successfully."; 
+
 
 ```
