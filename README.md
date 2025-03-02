@@ -46,6 +46,9 @@
     # Install SSMS
     choco install -y sql-server-management-studio
 
+    # Install Powertoys
+    choco install -y powertoys
+
     # Wait for VSCode to install before installing extensions
     Start-Sleep -Seconds 10
 
