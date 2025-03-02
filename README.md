@@ -1,7 +1,7 @@
 # Development tools installation with Powershell
 
 ```powershell
- # Function to install Chocolatey (package manager)
+    # Function to install Chocolatey (package manager)
     function Install-Chocolatey {
         Set-ExecutionPolicy Bypass -Scope Process -Force;
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor  [System.Net.SecurityProtocolType]::Tls12;
@@ -39,6 +39,12 @@
 
     # Install Git
     choco install -y git
+
+    # Install Azure Storage Explorer
+    choco install -y microsoftazurestorageexplorer
+
+    # Install SSMS
+    choco install -y sql-server-management-studio
 
     # Wait for VSCode to install before installing extensions
     Start-Sleep -Seconds 10
@@ -80,7 +86,5 @@
     Start-Process powershell -ArgumentList "-NoExit", "-Command", $npmScript
     
     Write-Output "All prerequisites, npm, and extensions have been installed successfully."; 
- 
-
 
 ```
